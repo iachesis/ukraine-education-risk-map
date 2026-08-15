@@ -1,1 +1,1 @@
-contents-api create v1
+contents-api update v2
