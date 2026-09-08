@@ -1,0 +1,72 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "targets": [
+        [
+          ".map-legend"
+        ]
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "targets": [
+        [
+          ".snapshot-caption"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(1) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(2) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(3) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(4) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(5) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(6) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(7) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(8) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(9) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(10) > span"
+        ],
+        [
+          ".leaflet-control-scale-line"
+        ],
+        [
+          ".map-index"
+        ],
+        [
+          ".map-heading > span:nth-child(2)"
+        ],
+        [
+          ".north > span"
+        ],
+        [
+          "#zoom-out"
+        ],
+        [
+          "#map-instructions"
+        ],
+        [
+          ".legend-label"
+        ]
+      ]
+    }
+  ]
+}

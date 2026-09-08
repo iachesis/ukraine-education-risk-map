@@ -1,0 +1,60 @@
+{
+  "observedAt": "2026-09-08T13:24:14.718615+00:00",
+  "session": {
+    "timestamp": "2026-09-08T11:58:17.903Z",
+    "originator": "Codex Desktop",
+    "cli_version": "0.153.4",
+    "model_provider": "openai"
+  },
+  "observedTurnModelEffort": [
+    {
+      "model": "gpt-6-astra",
+      "effort": "max"
+    }
+  ],
+  "owner": "One local principal product/design/engineering agent",
+  "supportingAgents": [],
+  "auxiliaryModels": [],
+  "imageGenerationCalls": 0,
+  "humanInterventions": "Charter and initial commission only before B0; no external critique",
+  "tools": {
+    "CodexCLI": "0.153.4",
+    "Node": "24.19.0",
+    "Python": "3.12.12",
+    "browserInspection": "Codex in-app browser via unified computer use plus native Playwright screenshots",
+    "Playwright": "1.63.0",
+    "Chromium": "153.0.8010.12",
+    "Firefox": "155.0",
+    "WebKit": "26.6",
+    "axe-core": "4.13.0",
+    "inAppBrowserEngineVersion": "Not independently exposed/verified; named engine versions refer to Playwright runs."
+  },
+  "instructions": [
+    "Issue #17 charter and commission comment",
+    "Repository AGENTS.md and user supplied reduce-work/reuse-first instructions",
+    "Desktop session developer and sandbox instructions"
+  ],
+  "skillsUsed": [
+    "software-search-first",
+    "openai-docs"
+  ],
+  "skillsUsage": "Reuse preflight and actual Codex model/effort identification. No new Skill, agent controller or infrastructure.",
+  "usageObservation": {
+    "timestamp": "2026-09-08T13:23:17.506Z",
+    "runtimeCumulativeCounters": {
+      "input_tokens": 11381257,
+      "cached_input_tokens": 10878464,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 116697,
+      "reasoning_output_tokens": 44614,
+      "total_tokens": 11497954
+    },
+    "interpretation": "Runtime-reported cumulative session tokens include repeated/cached context. Reasoning output is a reported component, not added again. These are not unique prompt size, credits or a monetary bill.",
+    "unavailable": [
+      "Task-specific dollar cost",
+      "Exact billed credits",
+      "Independent compute/energy measurement",
+      "Human first-look score"
+    ]
+  }
+}

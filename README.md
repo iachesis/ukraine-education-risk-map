@@ -1,41 +1,45 @@
-# Education risk map demo
+# Освітній атлас — Experiment 001
 
-An interactive, static Leaflet map that visualizes safety risk levels for Ukrainian territorial communities. The site runs entirely in the browser, pulling boundary GeoJSON and risk metadata from the `assets/data` folder, and highlights search results directly on the map.
+A working experimental atlas of the education-risk classifications recorded for Ukrainian territorial communities. The interface supports name/code lookup, regional and class filtering, a map and equivalent record list, comparison of up to three communities, scoped CSV export and shareable selections.
 
-## Overview
+This branch is a review candidate for [Issue #17](https://github.com/iachesis/ukraine-education-risk-map/issues/17). Its source snapshot is not a live safety feed. The official effective date of the included classifications has not been established.
 
-- Displays oblast and hromada boundaries with color-coded risk levels sourced from pre-generated JSON files.
-- Provides a Ukrainian search experience for finding communities by name or КАТОТТГ code, with the top matches highlighted on the map.
-- Shows contextual details via an information panel and hover/selection styles tailored for the data.
+## Run locally
 
-## Quick start
+From this checkout's root:
 
-1. Ensure Python 3 is available for a simple static server.
-2. From the repository root, run:
-   ```bash
-   python -m http.server 8000
-   ```
-3. Open [http://localhost:8000](http://localhost:8000) in your browser to explore the map.
+```sh
+python3 -m http.server 8018 --bind 127.0.0.1
+```
 
-Because the site is fully static, no additional build steps are required.
+Open [the atlas](http://127.0.0.1:8018/). There is no application install or build step, third-party tile service, account or API key. Serve over HTTP; opening `index.html` as a file cannot load the data modules.
 
-## Project structure
+Start the review with [the paired visual gallery](working/experiment-001/review.html), then [RETURN.md](working/experiment-001/RETURN.md) for identities, evidence, executed checks and limitations. The baseline remains reproducible at `8e24e53dffcc77caf6b2e23a7b96b370b5948529`.
 
-- `index.html` — Main page that wires together the map, loading state, and UI chrome.
-- `assets/data/` — Pre-built JSON files:
-  - `adm1.json`: oblast boundaries (Level 1 administrative units).
-  - `adm3.json`: hromada boundaries with searchable names and КАТОТТГ identifiers.
-  - `data.json`: risk-level metadata keyed by hromada.
-- `assets/js/` — Vanilla JavaScript modules for map setup and entry (`mapSetup.js`, `main.js`), styling (`layerStyling.js`), data loading (`dataLoader.js`), search (`search.js`), controls (`controls.js`), feature interactions (`featureEvents.js`), shared constants, and UI helpers.
-- `assets/styles/` — CSS for layout, typography, and Leaflet overrides.
-- `assets/logos/` — Partner branding shown in the header.
+## Source and implementation
 
-## Development tips
+- `assets/data/data.json`, `adm1.json` and `adm3.json` are unchanged pinned inputs. Geometry properties contain identifiers, not community names.
+- `assets/derived/` contains reproducible geography metadata and compressed TopoJSON. The census and derivation check every identifier, classification and geometry feature.
+- `assets/js/atlas-domain.js`, `atlas-map.js` and `atlas.js` separate record interpretation, Leaflet rendering and interface state. The application is vanilla JavaScript with vendored Leaflet, Fuse and TopoJSON client.
+- `assets/styles/atlas.css`, `assets/fonts/` and `assets/atlas-mark.svg` contain the candidate's visual system. Fonts are served locally.
+- `working/experiment-001/` contains isolated development dependencies, verification scripts and the review packet. These tools are optional for running the application.
 
-- The app relies on Leaflet loaded from local scripts in `assets/scripts/`; keep those in sync if you upgrade Leaflet.
-- Data fetching is optimized for static hosting. If you add new JSON assets, place them under `assets/data/` and adjust `dataLoader.js` accordingly.
-- Maintain Ukrainian-facing copy for user-visible text, using English comments only for developer clarification.
+The baseline's older modules/assets remain available but are not loaded by the candidate entry point. Production hosting configuration and embedding targets are unchanged.
+
+## Reproduce verification
+
+```sh
+cd working/experiment-001
+npm ci --ignore-scripts --cache .cache
+PLAYWRIGHT_BROWSERS_PATH=.browsers npx playwright install chromium firefox webkit
+python3 census.py --check
+node derive.mjs --check
+PLAYWRIGHT_BROWSERS_PATH=.browsers node verify.mjs
+PLAYWRIGHT_BROWSERS_PATH=.browsers node resilience.mjs
+```
+
+Keep the preview server running in another terminal. See [the test record](working/experiment-001/RETURN.md#verification) for capture/performance commands and exact tested conditions. Do not substitute test fixtures into the pinned input files.
 
 ## License
 
-This project is available under the MIT License. See [LICENSE.md](LICENSE.md) for details.
+Project code uses the [MIT license](LICENSE.md). Added dependency and asset licenses, provenance limits and reuse choices are recorded in [design notes](working/experiment-001/NOTES.md#reused-capabilities-and-provenance).

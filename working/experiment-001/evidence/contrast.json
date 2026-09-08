@@ -1,0 +1,141 @@
+{
+  "method": "WCAG relative sRGB luminance formula, CSS values read from candidate source. Main text/control tokens only; no full conformance claim. Map class fill colours are supplemented by explicit text, selection outline and equivalent list.",
+  "checks": [
+    {
+      "name": "ink/paper",
+      "foreground": "#202e33",
+      "background": "#f6f5f0",
+      "ratio": 12.825,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "ink/white",
+      "foreground": "#202e33",
+      "background": "#fffefa",
+      "ratio": 13.873,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "ink/sea",
+      "foreground": "#202e33",
+      "background": "#eaf0ed",
+      "ratio": 12.123,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "blue/paper",
+      "foreground": "#183f58",
+      "background": "#f6f5f0",
+      "ratio": 10.175,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "blue/white",
+      "foreground": "#183f58",
+      "background": "#fffefa",
+      "ratio": 11.006,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "blue/sea",
+      "foreground": "#183f58",
+      "background": "#eaf0ed",
+      "ratio": 9.618,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "muted/paper",
+      "foreground": "#5e696b",
+      "background": "#f6f5f0",
+      "ratio": 5.187,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "muted/white",
+      "foreground": "#5e696b",
+      "background": "#fffefa",
+      "ratio": 5.611,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "muted/sea",
+      "foreground": "#5e696b",
+      "background": "#eaf0ed",
+      "ratio": 4.903,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "active control text",
+      "foreground": "#fffefa",
+      "background": "#183f58",
+      "ratio": 11.006,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "keyboard focus",
+      "foreground": "#9b510c",
+      "background": "#f6f5f0",
+      "ratio": 5.38,
+      "minimum": 3,
+      "status": "PASS"
+    },
+    {
+      "name": ".search-box boundary",
+      "foreground": "#81908d",
+      "background": "#f6f5f0",
+      "ratio": 3.05,
+      "minimum": 3,
+      "status": "PASS"
+    },
+    {
+      "name": ".filters select boundary",
+      "foreground": "#81908d",
+      "background": "#f6f5f0",
+      "ratio": 3.05,
+      "minimum": 3,
+      "status": "PASS"
+    },
+    {
+      "name": ".outline-button boundary",
+      "foreground": "#81908d",
+      "background": "#f6f5f0",
+      "ratio": 3.05,
+      "minimum": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "map index text",
+      "foreground": "#516c70",
+      "background": "#f6f5f0",
+      "ratio": 5.159,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "identifier text",
+      "foreground": "#687276",
+      "background": "#f6f5f0",
+      "ratio": 4.519,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "snapshot caption",
+      "foreground": "#687169",
+      "background": "#f6f5f0",
+      "ratio": 4.63,
+      "minimum": 4.5,
+      "status": "PASS"
+    }
+  ]
+}

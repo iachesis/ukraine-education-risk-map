@@ -1,56 +1,421 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="uk">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/styles/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f6f5f0" />
+    <meta
+      name="description"
+      content="Дослідіть рівні ризику безпеки в освіті для територіальних громад України. Експериментальний атлас на основі зафіксованого набору даних."
+    />
+    <link rel="icon" href="assets/atlas-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/styles/leaflet.css" />
-    <script src="assets/scripts/leaflet.js"></script>
-    <script src="assets/scripts/fuse.js"></script>
-    <script type="module" src="assets/js/main.js"></script>
-    <title>Рівні ризиків територіальних громад в системі освіти</title>
+    <link rel="stylesheet" href="assets/styles/atlas.css" />
+    <script defer src="assets/scripts/leaflet.js"></script>
+    <script defer src="assets/scripts/fuse.js"></script>
+    <script defer src="assets/scripts/topojson-client.js"></script>
+    <script type="module" src="assets/js/atlas.js"></script>
+    <title>Освітній атлас — карта ризиків громад</title>
   </head>
   <body>
-    <header>
-      <div id="logos">
-        <img src="assets/logos/mon.svg" /> <img src="assets/logos/os.svg" />
-      </div>
-      <h1>Ризики безпеки в освіті</h1>
-      <div id="toolbar">
-        <div id="search-container">
-          <div class="search-input-row">
-            <input
-              type="search"
-              inputmode="search"
-              id="search"
-              placeholder="Пошук громади (назва або КАТОТТГ)"
-              autocomplete="off"
-              title="Топ-5 результатів буде підсвічено на мапі червоним"
-              aria-label="Пошук громади за назвою або КАТОТТГ, підсвічує на мапі топ-5 результатів"
-            />
-          </div>
-          <ul
-            id="search-results"
-            class="hidden"
-            role="listbox"
-            aria-label="Результати пошуку громади"
-          ></ul>
-        </div>
-        <div
-          id="help"
-          title="Дізнатись більше про рівні ризику безпеки в системі освіти"
-        >
-          ?
-        </div>
+    <a class="skip-link" href="#search">Перейти до пошуку громад</a>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Освітній атлас — початок"
+        ><img src="assets/atlas-mark.svg" alt="" width="34" height="34" /><span
+          >освітній атлас<span class="brand-sub">УКРАЇНА</span></span
+        ></a
+      >
+      <div class="topbar-right">
+        <span class="experiment"
+          ><span class="experiment-dot"></span> Експеримент 001</span
+        ><button class="about-button" data-open="about" aria-label="Про дані">
+          <span class="info-icon" aria-hidden="true">i</span
+          ><span>Про дані</span>
+        </button>
       </div>
     </header>
-    <main>
-      <div id="loading" role="status" aria-live="polite">
-        Завантаження даних…
-      </div>
-      <div id="error-message" role="alert" aria-live="assertive" class="hidden"></div>
-      <div id="map"></div>
+    <main class="workspace">
+      <aside class="sidebar" aria-label="Пошук і рівні ризику">
+        <div id="intro" class="intro">
+          <p class="eyebrow">ТЕРИТОРІАЛЬНІ ГРОМАДИ УКРАЇНИ</p>
+          <h1>Освіта.<br /><span>Карта ризиків.</span></h1>
+          <p class="intro-copy">
+            Від загальної картини країни<br class="desktop-only" />
+            до вашої громади.
+          </p>
+        </div>
+        <div class="search-area">
+          <label class="field-label" for="search">Знайти громаду</label>
+          <div class="search-box">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 4 4" /></svg
+            ><input
+              id="search"
+              type="search"
+              placeholder="Назва або код КАТОТТГ"
+              autocomplete="off"
+              spellcheck="false"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-controls="suggestions"
+              aria-expanded="false"
+              aria-describedby="search-help"
+              disabled
+            /><button
+              id="clear-search"
+              class="icon-button"
+              aria-label="Очистити пошук"
+              hidden
+            >
+              ×</button
+            ><kbd aria-hidden="true">/</kbd>
+          </div>
+          <p id="search-help" class="sr-only">
+            Назва українською, повний або частковий код. Стрілки обирають
+            результат, Enter відкриває, Escape закриває список.
+          </p>
+          <div id="suggestion-panel" class="suggestion-panel" hidden>
+            <ul
+              id="suggestions"
+              role="listbox"
+              aria-label="Знайдені громади"
+            ></ul>
+            <button id="all-results" class="all-results"></button>
+          </div>
+        </div>
+        <div class="filters">
+          <div class="region-field">
+            <label class="field-label" for="region">Регіон</label
+            ><select id="region" disabled>
+              <option value="">Уся Україна</option>
+            </select>
+          </div>
+          <div class="mobile-risk">
+            <label class="field-label" for="risk-select">Рівень ризику</label
+            ><select id="risk-select" disabled>
+              <option value="">Усі рівні</option>
+            </select>
+          </div>
+        </div>
+        <div id="data-state" class="load-notice" role="status">
+          Завантажуємо перелік громад…
+        </div>
+        <button id="retry-data" class="primary-button" hidden>
+          Спробувати ще раз
+        </button>
+        <section
+          id="detail"
+          class="detail"
+          aria-labelledby="detail-title"
+          hidden
+        ></section>
+        <section
+          id="overview"
+          class="overview"
+          aria-label="Розподіл рівнів ризику"
+        >
+          <div class="scope-heading">
+            <div>
+              <span id="record-total" class="record-total">—</span>
+              <p id="scope-label">записи з рівнем ризику</p>
+            </div>
+            <span class="scope-symbol" aria-hidden="true">↗</span>
+          </div>
+          <div class="distribution-heading">
+            <h2>Рівні ризику</h2>
+            <button
+              class="text-button"
+              data-open="about"
+              aria-label="Як читати рівні ризику"
+            >
+              Як читати <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div id="distribution" class="distribution"></div>
+          <button
+            id="special-filter"
+            class="special-filter"
+            aria-pressed="false"
+          >
+            <span class="special-swatch" aria-hidden="true"></span
+            ><span>Зона відчуження</span><span>1</span>
+          </button>
+          <p class="filter-hint">Оберіть рівень, щоб побачити громади.</p>
+        </section>
+        <div class="sidebar-source">
+          <span class="source-rule"></span>
+          <p>Зафіксований набір · січень 2026</p>
+          <button class="text-button" data-open="about">
+            Джерела та межі даних <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </aside>
+      <section class="stage" aria-label="Дослідження громад">
+        <div class="stage-toolbar">
+          <div class="view-caption">
+            <span class="eyebrow"
+              >АТЛАС / <span id="view-scope">УКРАЇНА</span></span
+            ><span id="view-count" class="view-count">Завантаження…</span
+            ><span class="snapshot-caption"
+              >Набір: січень 2026 · дата чинності не встановлена</span
+            >
+          </div>
+          <div class="view-switch" role="group" aria-label="Спосіб перегляду">
+            <button id="map-view" aria-pressed="true">
+              <svg aria-hidden="true" viewBox="0 0 20 20">
+                <path
+                  d="m2 4 5-2 6 2 5-2v14l-5 2-6-2-5 2ZM7 2v14M13 4v14"
+                /></svg
+              >Мапа</button
+            ><button id="list-view" aria-pressed="false">
+              <svg aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M7 4h11M7 10h11M7 16h11M2 4h1M2 10h1M2 16h1" /></svg
+              >Список
+            </button>
+          </div>
+        </div>
+        <div id="active-filters" class="active-filters" hidden>
+          <span id="filter-description"></span
+          ><button id="reset-filters">
+            Скинути <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="map-frame" id="map-frame">
+          <div
+            id="map"
+            role="region"
+            aria-label="Карта рівнів ризику громад України. Для вибору з клавіатури скористайтеся пошуком або списком."
+            aria-describedby="map-instructions"
+          ></div>
+          <div class="map-heading">
+            <span class="map-index">01 /</span
+            ><span>Ризики безпеки<br />в системі освіти</span>
+          </div>
+          <div class="north" aria-hidden="true">
+            <span>ПН</span
+            ><svg viewBox="0 0 20 40">
+              <path d="M10 2 17 23 10 19 3 23Z" />
+              <path d="M10 19v19" />
+            </svg>
+          </div>
+          <div id="map-state" class="map-state" role="status">
+            <span class="loading-mark" aria-hidden="true"></span
+            ><strong>Вимальовуємо Україну</strong
+            ><span>Перелік громад доступний окремо від мапи.</span
+            ><button id="retry-map" class="primary-button" hidden>
+              Завантажити мапу ще раз
+            </button>
+          </div>
+          <div class="map-tools" role="group" aria-label="Керування мапою">
+            <button id="zoom-in" aria-label="Наблизити мапу">+</button
+            ><button id="zoom-out" aria-label="Віддалити мапу">−</button
+            ><span class="tool-divider"></span
+            ><button id="fit-map" aria-label="Показати всю Україну">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5" />
+              </svg>
+            </button>
+          </div>
+          <div class="map-bottom">
+            <span id="map-instructions"
+              >Оберіть громаду на мапі або знайдіть за назвою</span
+            ><span class="map-signature">ОСВІТНІЙ АТЛАС</span>
+          </div>
+        </div>
+        <div id="list-panel" class="list-panel" hidden>
+          <div class="list-heading">
+            <h2 id="list-title">Громади України</h2>
+            <button id="download" class="text-button">
+              Завантажити CSV <span aria-hidden="true">↓</span>
+            </button>
+          </div>
+          <p class="list-note" id="list-note"></p>
+          <div id="community-list"></div>
+          <button id="load-more" class="load-more" hidden>Показати ще</button>
+        </div>
+        <div class="map-legend" aria-label="Легенда карти">
+          <span class="legend-label">Рівень ризику</span>
+          <div id="compact-legend"></div>
+          <button
+            class="text-button"
+            data-open="about"
+            aria-label="Пояснення легенди"
+          >
+            Про класифікацію <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="stage-footnote">
+          <span
+            >Межі громад — для огляду. Рівень ризику — за записом у
+            наборі.</span
+          ><button class="text-button" data-open="about">
+            6 записів без меж на мапі <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="site-footer">
+      <span>Дані допомагають бачити контекст.</span
+      ><span>Ця мапа не показує поточну безпекову ситуацію.</span
+      ><a
+        href="https://github.com/iachesis/ukraine-education-risk-map"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Відкритий проєкт <span aria-hidden="true">↗</span></a
+      >
+    </footer>
+    <div id="compare-tray" class="compare-tray" hidden>
+      <span id="compare-count"></span
+      ><button id="open-compare" class="primary-button">Порівняти</button
+      ><button
+        id="clear-compare"
+        class="icon-button"
+        aria-label="Очистити порівняння"
+      >
+        ×
+      </button>
+    </div>
+    <dialog id="about" aria-labelledby="about-title">
+      <div class="dialog-header">
+        <span class="eyebrow">ЯК ЧИТАТИ ЦЮ МАПУ</span
+        ><button class="icon-button" data-close aria-label="Закрити пояснення">
+          ×
+        </button>
+      </div>
+      <div class="dialog-body">
+        <h2 id="about-title">Контекст перед<br /><span>висновками.</span></h2>
+        <p class="dialog-lead">
+          Мапа показує категорію ризику безпеки в системі освіти, зазначену для
+          громади у зафіксованому наборі.
+        </p>
+        <div id="about-levels" class="about-levels"></div>
+        <p>
+          Це впорядковані категорії, а не числові бали. Площа на мапі не показує
+          кількість дітей чи шкіл. Навіть «Задовільний» не означає відсутності
+          небезпеки.
+        </p>
+        <section class="source-section">
+          <h3>Що саме тут показано</h3>
+          <dl>
+            <div>
+              <dt>Набір у репозиторії</dt>
+              <dd>
+                Зміна файлу: 12 січня 2026 року. Офіційну дату чинності цієї
+                версії не встановлено.
+              </dd>
+            </div>
+            <div>
+              <dt>Повнота переліку</dt>
+              <dd>
+                1 774 записи з рівнем ризику; 1 768 мають межі громад. Ще 6
+                записів у Криму доступні в пошуку та списку без прив’язки до
+                полігона.
+              </dd>
+            </div>
+            <div>
+              <dt>Особлива територія</dt>
+              <dd>
+                Чорнобильська зона відчуження має межі, але не має запису з
+                рівнем ризику. Штрихування відрізняє її від п’яти класів.
+              </dd>
+            </div>
+            <div>
+              <dt>Територіальне охоплення</dt>
+              <dd>
+                Усі території вихідної геометрії збережені, включно з Кримом і
+                Севастополем. Межі не є картою контролю територій.
+              </dd>
+            </div>
+          </dl>
+        </section>
+        <section class="source-section">
+          <h3>Джерела та повноваження</h3>
+          <p>
+            МОН описує зонування як основу для освітньої політики, розміщення
+            укриттів і відновлення очного або змішаного навчання. Наявність
+            категорії сама по собі не є рішенням про відкриття конкретної школи.
+          </p>
+          <a
+            class="source-link"
+            href="https://mon.gov.ua/news/zatverdzheno-perelik-hromad-za-rivnem-ryzyku-v-systemi-osvity-iak-pereviryty-svii-rehion"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span
+              >Повідомлення МОН<small
+                >9 вересня 2024 року · інституційний контекст</small
+              ></span
+            ><span aria-hidden="true">↗</span></a
+          ><a
+            class="source-link"
+            href="https://zakon.rada.gov.ua/laws/show/866-2024-%D0%BF"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span
+              >Методика оцінювання ризиків<small
+                >Постанова КМУ № 866 від 2 серпня 2024 року</small
+              ></span
+            ><span aria-hidden="true">↗</span></a
+          ><a
+            class="source-link"
+            href="https://zakon.rada.gov.ua/laws/show/z1339-24"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span
+              >Перелік громад<small
+                >Правове джерело, на яке посилається вихідний проєкт</small
+              ></span
+            ><span aria-hidden="true">↗</span></a
+          ><a class="source-link" href="assets/data/data.json" download
+            ><span
+              >Вихідний набір даних<small
+                >JSON · незмінений файл із зафіксованої версії</small
+              ></span
+            ><span aria-hidden="true">↓</span></a
+          >
+          <p class="quiet">
+            Поточні редакції правових актів не звірено з кожним записом цього
+            набору. Походження й дата актуальності геометрії у файлах не
+            зазначені.
+          </p>
+        </section>
+        <div class="experiment-note">
+          <strong>Експеримент 001</strong>
+          <p>
+            Незалежний прототип інтерфейсу проєкту etheric.dev. Не є новою
+            офіційною публікацією МОН чи рекомендацією щодо поточної безпеки.
+          </p>
+        </div>
+      </div>
+    </dialog>
+    <dialog id="comparison" aria-labelledby="comparison-title">
+      <div class="dialog-header">
+        <span class="eyebrow">ПОРУЧ, ЩОБ ПОРІВНЯТИ</span
+        ><button class="icon-button" data-close aria-label="Закрити порівняння">
+          ×
+        </button>
+      </div>
+      <div class="dialog-body">
+        <h2 id="comparison-title">Громади в контексті</h2>
+        <p>
+          Класифікації з одного зафіксованого набору. Без числового рейтингу.
+        </p>
+        <div id="comparison-content"></div>
+      </div>
+    </dialog>
+    <div
+      id="announcement"
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+    <div id="toast" class="toast" role="status" hidden></div>
+    <noscript
+      ><div class="noscript">
+        Для інтерактивного атласу потрібен JavaScript.
+        <a href="assets/data/data.json">Завантажити вихідні дані</a>.
+      </div></noscript
+    >
   </body>
 </html>

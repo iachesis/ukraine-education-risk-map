@@ -1,0 +1,252 @@
+{
+  "started": "2026-09-08T12:42:56.592Z",
+  "sourceFiles": [
+    "index.html",
+    "assets/styles/atlas.css",
+    "assets/js/atlas.js",
+    "assets/js/atlas-map.js",
+    "assets/js/atlas-domain.js"
+  ],
+  "sourceDigest": "2138384dfc4c56ef23ac1321d46f6db547a9cda86d22f9264ff791691f3794e6",
+  "engines": {
+    "chromium": {
+      "version": "153.0.8010.12"
+    },
+    "firefox": {
+      "version": "155.0"
+    },
+    "webkit": {
+      "version": "26.6"
+    }
+  },
+  "results": [
+    {
+      "name": "Complete domain join and classification parity",
+      "status": "PASS"
+    },
+    {
+      "name": "All 1774 codes searchable, with exact-code priority",
+      "status": "PASS"
+    },
+    {
+      "name": "Separate domain fixtures never coerce unknown into a valid class",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: opening, all 1769 mapped classifications, no overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: real Непереборний name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: real Дуже високий name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: real Високий name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: real Помірний name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: real Задовільний name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: name priority, ambiguity, keyboard, focus, Escape",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: apostrophe variants, partial code and long Ukrainian name",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: all six absent-boundary records and special territory",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: region and class filters, reset, list pagination and CSV",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: empty result, comparison limit/removal and accessible dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "chromium: URL restore, clipboard request, sources and focus return",
+      "status": "FAIL",
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(await page.locator(\"#toast\").isVisible())\n"
+    },
+    {
+      "name": "chromium: no runtime errors or third-party requests on the normal path",
+      "status": "PASS",
+      "detail": {
+        "requests": 30
+      }
+    },
+    {
+      "name": "axe WCAG 2.2 tags: overview",
+      "status": "PASS",
+      "detail": {
+        "passes": 27,
+        "incomplete": [
+          "aria-prohibited-attr",
+          "color-contrast"
+        ]
+      }
+    },
+    {
+      "name": "axe WCAG 2.2 tags: detail",
+      "status": "PASS",
+      "detail": {
+        "passes": 29,
+        "incomplete": [
+          "aria-prohibited-attr",
+          "color-contrast"
+        ]
+      }
+    },
+    {
+      "name": "axe WCAG 2.2 tags: list",
+      "status": "PASS",
+      "detail": {
+        "passes": 28,
+        "incomplete": [
+          "aria-prohibited-attr",
+          "color-contrast"
+        ]
+      }
+    },
+    {
+      "name": "axe WCAG 2.2 tags: about",
+      "status": "PASS",
+      "detail": {
+        "passes": 18,
+        "incomplete": []
+      }
+    },
+    {
+      "name": "axe WCAG 2.2 tags: comparison",
+      "status": "PASS",
+      "detail": {
+        "passes": 14,
+        "incomplete": []
+      }
+    },
+    {
+      "name": "firefox: opening, all 1769 mapped classifications, no overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: real Непереборний name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: real Дуже високий name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: real Високий name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: real Помірний name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: real Задовільний name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: name priority, ambiguity, keyboard, focus, Escape",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: apostrophe variants, partial code and long Ukrainian name",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: all six absent-boundary records and special territory",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: region and class filters, reset, list pagination and CSV",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: empty result, comparison limit/removal and accessible dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "firefox: URL restore, clipboard request, sources and focus return",
+      "status": "FAIL",
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(await page.locator(\"#toast\").isVisible())\n"
+    },
+    {
+      "name": "firefox: no runtime errors or third-party requests on the normal path",
+      "status": "PASS",
+      "detail": {
+        "requests": 27
+      }
+    },
+    {
+      "name": "webkit: opening, all 1769 mapped classifications, no overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: real Непереборний name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: real Дуже високий name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: real Високий name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: real Помірний name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: real Задовільний name, code and persistent selection",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: name priority, ambiguity, keyboard, focus, Escape",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: apostrophe variants, partial code and long Ukrainian name",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: all six absent-boundary records and special territory",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: region and class filters, reset, list pagination and CSV",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: empty result, comparison limit/removal and accessible dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: URL restore, clipboard request, sources and focus return",
+      "status": "PASS"
+    },
+    {
+      "name": "webkit: no runtime errors or third-party requests on the normal path",
+      "status": "PASS",
+      "detail": {
+        "requests": 28
+      }
+    }
+  ]
+}

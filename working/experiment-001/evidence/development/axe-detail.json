@@ -1,0 +1,75 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "targets": [
+        [
+          ".map-legend"
+        ]
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "targets": [
+        [
+          ".detail-top > .eyebrow"
+        ],
+        [
+          "#view-count"
+        ],
+        [
+          ".snapshot-caption"
+        ],
+        [
+          "#map-view"
+        ],
+        [
+          "#list-view"
+        ],
+        [
+          ".leaflet-control-scale-line"
+        ],
+        [
+          ".map-index"
+        ],
+        [
+          ".map-heading > span:nth-child(2)"
+        ],
+        [
+          ".north > span"
+        ],
+        [
+          "#zoom-out"
+        ],
+        [
+          "#map-instructions"
+        ],
+        [
+          ".map-signature"
+        ],
+        [
+          ".legend-label"
+        ],
+        [
+          ".legend-item:nth-child(1) > span"
+        ],
+        [
+          ".legend-item:nth-child(2) > span"
+        ],
+        [
+          ".legend-item:nth-child(3) > span"
+        ],
+        [
+          ".legend-item:nth-child(4) > span"
+        ],
+        [
+          ".legend-item:nth-child(5) > span"
+        ],
+        [
+          "button[aria-label=\"Пояснення легенди\"]"
+        ]
+      ]
+    }
+  ]
+}

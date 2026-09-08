@@ -1,0 +1,39 @@
+{
+  "observedAt": "2026-09-08T13:31:42.770831+00:00",
+  "testedCodeCommit": "a2e4a1da0bf27afc839be50eb5a9d506e64aded9",
+  "runtimeHashesMatchB0": true,
+  "coreSourceDigestMatchesB0": true,
+  "relativeReviewLinksExist": true,
+  "coreChecks": {
+    "PASS": 55,
+    "FAIL": 0
+  },
+  "resilienceChecks": {
+    "PASS": 12,
+    "FAIL": 0
+  },
+  "performanceRuns": 48,
+  "traces": {
+    "baseline-desktop-trace.zip": {
+      "bytes": 5541591,
+      "sha256": "7e41056ddcd8e20cda7f15ad7c608601f6f95d25d742b054d8d1daf5afa66069",
+      "entries": 42
+    },
+    "baseline-mobile-trace.zip": {
+      "bytes": 4262033,
+      "sha256": "1e7443d105112c1f1cf2a2b40765655d4ab3b299ed855366874611331568f653",
+      "entries": 41
+    },
+    "candidate-mobile-trace.zip": {
+      "bytes": 9619754,
+      "sha256": "141dd8a1881ecf94b9ef5003119401eb330b2e2342137ad11b7d790a2106e6e7",
+      "entries": 211
+    },
+    "candidate-desktop-trace.zip": {
+      "bytes": 9152610,
+      "sha256": "4899a153129cde132d5cfa49a4a2f3f3b47e6d6b32d8a5d2a71b0a99a522ec32",
+      "entries": 184
+    }
+  },
+  "note": "Final evidence-only publication packet validated against the frozen static runtime. Development evidence is explicitly separate."
+}

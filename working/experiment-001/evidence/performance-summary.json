@@ -1,0 +1,434 @@
+[
+  {
+    "profile": "local",
+    "device": "desktop",
+    "version": "baseline",
+    "cache": "cold",
+    "n": 3,
+    "mapRendered": {
+      "median": 404.80000001192093,
+      "min": 404.5,
+      "max": 618.1999999880791
+    },
+    "searchUsefulMs": {
+      "median": 704.6999999880791,
+      "min": 688.1999999880791,
+      "max": 939.6999999880791
+    },
+    "lookupMs": {
+      "median": 298,
+      "min": 294.0999999642372,
+      "max": 299.19999998807907
+    },
+    "transferredBytes": {
+      "median": 9534206,
+      "min": 9534206,
+      "max": 9534206
+    }
+  },
+  {
+    "profile": "local",
+    "device": "desktop",
+    "version": "baseline",
+    "cache": "warm",
+    "n": 3,
+    "mapRendered": {
+      "median": 159,
+      "min": 142.9000000357628,
+      "max": 161.10000002384186
+    },
+    "searchUsefulMs": {
+      "median": 457.4000000357628,
+      "min": 443.9000000357628,
+      "max": 936.4000000357628
+    },
+    "lookupMs": {
+      "median": 298,
+      "min": 295.10000002384186,
+      "max": 298.19999998807907
+    },
+    "transferredBytes": {
+      "median": 8326331,
+      "min": 8326331,
+      "max": 8326331
+    }
+  },
+  {
+    "profile": "local",
+    "device": "desktop",
+    "version": "candidate",
+    "cache": "cold",
+    "n": 3,
+    "mapRendered": {
+      "median": 189.10000002384186,
+      "min": 186.80000001192093,
+      "max": 231.10000002384186
+    },
+    "searchUsefulMs": {
+      "median": 204.10000002384186,
+      "min": 203.30000001192093,
+      "max": 234.5
+    },
+    "lookupMs": {
+      "median": 8,
+      "min": 7.899999976158142,
+      "max": 9.199999988079071
+    },
+    "transferredBytes": {
+      "median": 1613212,
+      "min": 1613212,
+      "max": 1613212
+    }
+  },
+  {
+    "profile": "local",
+    "device": "desktop",
+    "version": "candidate",
+    "cache": "warm",
+    "n": 3,
+    "mapRendered": {
+      "median": 139.39999997615814,
+      "min": 137.80000001192093,
+      "max": 143.60000002384186
+    },
+    "searchUsefulMs": {
+      "median": 146.10000002384186,
+      "min": 145.5,
+      "max": 147.29999995231628
+    },
+    "lookupMs": {
+      "median": 6.399999976158142,
+      "min": 6.300000011920929,
+      "max": 7
+    },
+    "transferredBytes": {
+      "median": 105,
+      "min": 105,
+      "max": 105
+    }
+  },
+  {
+    "profile": "local",
+    "device": "mobile",
+    "version": "baseline",
+    "cache": "cold",
+    "n": 3,
+    "mapRendered": {
+      "median": 503.5,
+      "min": 420.5,
+      "max": 505.39999997615814
+    },
+    "searchUsefulMs": {
+      "median": 800.3999999761581,
+      "min": 718.0999999642372,
+      "max": 1299.6000000238419
+    },
+    "lookupMs": {
+      "median": 380.7999999523163,
+      "min": 375.0999999642372,
+      "max": 383.5999999642372
+    },
+    "transferredBytes": {
+      "median": 9534206,
+      "min": 9534206,
+      "max": 9534206
+    }
+  },
+  {
+    "profile": "local",
+    "device": "mobile",
+    "version": "baseline",
+    "cache": "warm",
+    "n": 3,
+    "mapRendered": {
+      "median": 139,
+      "min": 137.9000000357628,
+      "max": 144.70000004768372
+    },
+    "searchUsefulMs": {
+      "median": 448.69999998807907,
+      "min": 439,
+      "max": 457.2999999523163
+    },
+    "lookupMs": {
+      "median": 382.0999999642372,
+      "min": 373.69999998807907,
+      "max": 382.69999998807907
+    },
+    "transferredBytes": {
+      "median": 8326331,
+      "min": 8326331,
+      "max": 8326331
+    }
+  },
+  {
+    "profile": "local",
+    "device": "mobile",
+    "version": "candidate",
+    "cache": "cold",
+    "n": 3,
+    "mapRendered": {
+      "median": 189.69999998807907,
+      "min": 170.5,
+      "max": 194.5999999642372
+    },
+    "searchUsefulMs": {
+      "median": 192.89999997615814,
+      "min": 192.10000002384186,
+      "max": 197.79999995231628
+    },
+    "lookupMs": {
+      "median": 7.300000011920929,
+      "min": 7.300000011920929,
+      "max": 8.699999988079071
+    },
+    "transferredBytes": {
+      "median": 1613212,
+      "min": 1613212,
+      "max": 1613212
+    }
+  },
+  {
+    "profile": "local",
+    "device": "mobile",
+    "version": "candidate",
+    "cache": "warm",
+    "n": 3,
+    "mapRendered": {
+      "median": 138.19999998807907,
+      "min": 121.5,
+      "max": 139.10000002384186
+    },
+    "searchUsefulMs": {
+      "median": 137.5,
+      "min": 136.79999995231628,
+      "max": 139.0999999642372
+    },
+    "lookupMs": {
+      "median": 6.800000011920929,
+      "min": 6.699999988079071,
+      "max": 7.700000047683716
+    },
+    "transferredBytes": {
+      "median": 105,
+      "min": 105,
+      "max": 105
+    }
+  },
+  {
+    "profile": "constrained",
+    "device": "desktop",
+    "version": "baseline",
+    "cache": "cold",
+    "n": 3,
+    "mapRendered": {
+      "median": 20087.600000023842,
+      "min": 20084.600000023842,
+      "max": 20118.900000035763
+    },
+    "searchUsefulMs": {
+      "median": 20443.400000035763,
+      "min": 20442.80000001192,
+      "max": 20480.5
+    },
+    "lookupMs": {
+      "median": 390.10000002384186,
+      "min": 373.2999999523163,
+      "max": 390.89999997615814
+    },
+    "transferredBytes": {
+      "median": 9534206,
+      "min": 9534206,
+      "max": 9534206
+    }
+  },
+  {
+    "profile": "constrained",
+    "device": "desktop",
+    "version": "baseline",
+    "cache": "warm",
+    "n": 3,
+    "mapRendered": {
+      "median": 17380.5,
+      "min": 17368.599999964237,
+      "max": 17381.30000001192
+    },
+    "searchUsefulMs": {
+      "median": 17736.399999976158,
+      "min": 17726.69999998808,
+      "max": 18181.80000001192
+    },
+    "lookupMs": {
+      "median": 378.30000001192093,
+      "min": 321.30000001192093,
+      "max": 387.30000001192093
+    },
+    "transferredBytes": {
+      "median": 8326331,
+      "min": 8326331,
+      "max": 8326331
+    }
+  },
+  {
+    "profile": "constrained",
+    "device": "desktop",
+    "version": "candidate",
+    "cache": "cold",
+    "n": 3,
+    "mapRendered": {
+      "median": 3874.7000000476837,
+      "min": 3873.7999999523163,
+      "max": 3901.300000011921
+    },
+    "searchUsefulMs": {
+      "median": 2562.300000011921,
+      "min": 2559.899999976158,
+      "max": 2579.7000000476837
+    },
+    "lookupMs": {
+      "median": 32,
+      "min": 31.80000001192093,
+      "max": 32.30000001192093
+    },
+    "transferredBytes": {
+      "median": 1613212,
+      "min": 1613212,
+      "max": 1613212
+    }
+  },
+  {
+    "profile": "constrained",
+    "device": "desktop",
+    "version": "candidate",
+    "cache": "warm",
+    "n": 3,
+    "mapRendered": {
+      "median": 565.4000000357628,
+      "min": 564,
+      "max": 572.1999999880791
+    },
+    "searchUsefulMs": {
+      "median": 624.8000000119209,
+      "min": 608.6000000238419,
+      "max": 633.7999999523163
+    },
+    "lookupMs": {
+      "median": 28.600000023841858,
+      "min": 28.100000023841858,
+      "max": 33.39999997615814
+    },
+    "transferredBytes": {
+      "median": 105,
+      "min": 105,
+      "max": 105
+    }
+  },
+  {
+    "profile": "constrained",
+    "device": "mobile",
+    "version": "baseline",
+    "cache": "cold",
+    "n": 3,
+    "mapRendered": {
+      "median": 20075.399999976158,
+      "min": 20047.400000035763,
+      "max": 20119.399999976158
+    },
+    "searchUsefulMs": {
+      "median": 20425,
+      "min": 20412.19999998808,
+      "max": 20472.5
+    },
+    "lookupMs": {
+      "median": 627.8000000119209,
+      "min": 627.8000000119209,
+      "max": 628.8999999761581
+    },
+    "transferredBytes": {
+      "median": 9534206,
+      "min": 9534206,
+      "max": 9534206
+    }
+  },
+  {
+    "profile": "constrained",
+    "device": "mobile",
+    "version": "baseline",
+    "cache": "warm",
+    "n": 3,
+    "mapRendered": {
+      "median": 17335.5,
+      "min": 17333.5,
+      "max": 17340.100000023842
+    },
+    "searchUsefulMs": {
+      "median": 17668.599999964237,
+      "min": 17664.100000023842,
+      "max": 17687.700000047684
+    },
+    "lookupMs": {
+      "median": 616.6999999880791,
+      "min": 614.6999999880791,
+      "max": 623.1999999880791
+    },
+    "transferredBytes": {
+      "median": 8326331,
+      "min": 8326331,
+      "max": 8326331
+    }
+  },
+  {
+    "profile": "constrained",
+    "device": "mobile",
+    "version": "candidate",
+    "cache": "cold",
+    "n": 3,
+    "mapRendered": {
+      "median": 3857.699999988079,
+      "min": 3857.400000035763,
+      "max": 3866.400000035763
+    },
+    "searchUsefulMs": {
+      "median": 2565.800000011921,
+      "min": 2564.899999976158,
+      "max": 2570.800000011921
+    },
+    "lookupMs": {
+      "median": 31.799999952316284,
+      "min": 31.5,
+      "max": 32
+    },
+    "transferredBytes": {
+      "median": 1613212,
+      "min": 1613212,
+      "max": 1613212
+    }
+  },
+  {
+    "profile": "constrained",
+    "device": "mobile",
+    "version": "candidate",
+    "cache": "warm",
+    "n": 3,
+    "mapRendered": {
+      "median": 538.8999999761581,
+      "min": 525.0999999642372,
+      "max": 548.0999999642372
+    },
+    "searchUsefulMs": {
+      "median": 582.2999999523163,
+      "min": 579.3999999761581,
+      "max": 588.0999999642372
+    },
+    "lookupMs": {
+      "median": 27.599999964237213,
+      "min": 26.900000035762787,
+      "max": 27.80000001192093
+    },
+    "transferredBytes": {
+      "median": 105,
+      "min": 105,
+      "max": 105
+    }
+  }
+]
