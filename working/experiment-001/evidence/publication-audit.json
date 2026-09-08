@@ -1,0 +1,108 @@
+{
+  "observedAt": "2026-09-08T13:22:42.731516+00:00",
+  "main": {
+    "sha": "8e24e53dffcc77caf6b2e23a7b96b370b5948529",
+    "protected": false
+  },
+  "pages": {
+    "status": "built",
+    "cname": "risks.etheric.dev",
+    "html_url": "https://risks.etheric.dev/",
+    "build_type": "legacy",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    }
+  },
+  "workflows": [
+    {
+      "name": "CodeQL",
+      "path": "dynamic/github-code-scanning/codeql",
+      "state": "active"
+    },
+    {
+      "name": "pages-build-deployment",
+      "path": "dynamic/pages/pages-build-deployment",
+      "state": "active"
+    }
+  ],
+  "repositoryHooksCount": 0,
+  "githubDirectoryOnMain": false,
+  "pagesEnvironmentPolicy": {
+    "protected_branches": false,
+    "custom_branch_policies": true
+  },
+  "allowedDeploymentBranches": [
+    {
+      "name": "main",
+      "type": "branch"
+    }
+  ],
+  "recentDeployments": [
+    {
+      "ref": "main",
+      "sha": "8e24e53dffcc77caf6b2e23a7b96b370b5948529",
+      "environment": "github-pages",
+      "created_at": "2026-03-20T07:52:43Z"
+    },
+    {
+      "ref": "main",
+      "sha": "8e24e53dffcc77caf6b2e23a7b96b370b5948529",
+      "environment": "github-pages",
+      "created_at": "2026-01-12T09:12:56Z"
+    },
+    {
+      "ref": "main",
+      "sha": "8b7cce22df4c6c3357b07f38e8e50ed24f3ddf37",
+      "environment": "github-pages",
+      "created_at": "2026-01-12T09:11:17Z"
+    },
+    {
+      "ref": "main",
+      "sha": "2a8ab817bc605df02f7bc9a776fc08d60b71c5d5",
+      "environment": "github-pages",
+      "created_at": "2025-11-26T01:45:47Z"
+    },
+    {
+      "ref": "main",
+      "sha": "d4b193eb31a14d6e6fd92cf4615bae6558d779e0",
+      "environment": "github-pages",
+      "created_at": "2025-11-26T01:17:45Z"
+    },
+    {
+      "ref": "main",
+      "sha": "1e708951a0bcf7bf470eb5126a8bb3e82633c5f2",
+      "environment": "github-pages",
+      "created_at": "2025-11-26T01:10:38Z"
+    },
+    {
+      "ref": "main",
+      "sha": "4c17919e9b641e7c7b7cf0657d2f7f50fa3c08a9",
+      "environment": "github-pages",
+      "created_at": "2025-11-26T00:35:48Z"
+    },
+    {
+      "ref": "main",
+      "sha": "6f4385c0c336ad3f3954868f9a835b9d9a16cf72",
+      "environment": "github-pages",
+      "created_at": "2025-11-26T00:10:09Z"
+    },
+    {
+      "ref": "main",
+      "sha": "b87d86f33bc55d1e0f06b274a6dad140fa9d24ef",
+      "environment": "github-pages",
+      "created_at": "2025-11-26T00:02:06Z"
+    },
+    {
+      "ref": "main",
+      "sha": "d3b3dbcfa7b5e1670e0a41926e17d0aa9f8b691c",
+      "environment": "github-pages",
+      "created_at": "2025-11-25T23:54:08Z"
+    }
+  ],
+  "mainCheckSuiteApps": [
+    "github-actions",
+    "github-pages"
+  ],
+  "reviewStorageDecision": "SAFE within observed repository configuration: legacy Pages source is main/root, Pages environment allows only main, no repository hooks or checked-in workflows; experimental branch push and Draft PR are not deployment inputs. No production activation is authorized."
+}

@@ -1,0 +1,36 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "targets": [
+        [
+          ".map-legend"
+        ]
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "targets": [
+        [
+          ".leaflet-control-scale-line"
+        ],
+        [
+          ".map-index"
+        ],
+        [
+          ".map-heading > span:nth-child(2)"
+        ],
+        [
+          ".north > span"
+        ],
+        [
+          "#zoom-out"
+        ],
+        [
+          "#map-instructions"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "browser": "Chromium",
+  "version": "153.0.8010.12",
+  "results": [
+    {
+      "name": "Search useful while geometry delayed 3000 ms",
+      "status": "PASS",
+      "errors": [],
+      "detail": {
+        "searchResultMs": 216.10000002384186
+      }
+    },
+    {
+      "name": "Data HTTP 503, clear failure, successful manual retry",
+      "status": "PASS",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ]
+    },
+    {
+      "name": "Invalid metadata response is visibly rejected",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Geometry failure preserves working search/list; retry succeeds",
+      "status": "PASS",
+      "errors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ]
+    },
+    {
+      "name": "Corrupt gzip is visibly rejected; metadata stays usable",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Unavailable localStorage/sessionStorage does not affect application",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Separate missing/invalid fixtures display neutral categories and pattern",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Keyboard focus visible, tab access and source dialog confinement",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Touch at 390px: select, map navigation, reset, no overflow",
+      "status": "FAIL",
+      "error": "locator.tap: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-community=\"3200000\"]')\u001b[22m\n\u001b[2m    - locator resolved to <path stroke=\"#f3f4ec\" fill-opacity=\"1\" aria-hidden=\"true\" stroke-width=\"0.42\" fill-rule=\"evenodd\" stroke-opacity=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"url(#zone-hatch)\" data-community=\"3200000\" class=\"leaflet-interactive\" d=\"M309 208L308 208L307 206L304 205L302 203L293 205L293 203L292 203L292 202L295 200L294 198L294 196L295 195L291 194L290 195L287 195L283 193L282 191L279 189L274 183L271 182L269 179L275 175L274 163L273 161L271 160L270 158L269 158L267 154L266 154L265 151L264 151L…></path>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m",
+      "errors": []
+    },
+    {
+      "name": "Touch at 320px: select, map navigation, reset, no overflow",
+      "status": "FAIL",
+      "error": "locator.tap: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-community=\"3200000\"]')\u001b[22m\n\u001b[2m    - locator resolved to <path stroke=\"#f3f4ec\" fill-opacity=\"1\" aria-hidden=\"true\" stroke-width=\"0.42\" fill-rule=\"evenodd\" stroke-opacity=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"url(#zone-hatch)\" data-community=\"3200000\" class=\"leaflet-interactive\" d=\"M274 188L273 188L272 186L269 185L267 183L258 185L258 183L257 183L257 182L260 180L259 178L259 176L260 175L256 174L255 175L252 175L248 173L247 171L244 169L239 163L236 162L234 159L240 155L239 143L238 141L236 140L235 138L234 138L232 134L231 134L230 131L229 131L…></path>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m",
+      "errors": []
+    },
+    {
+      "name": "200% text enlargement: content reflow, controls and long name",
+      "status": "PASS",
+      "errors": [],
+      "detail": {
+        "method": "Text-bearing DOM nodes and form controls at 2x computed font size; not OS/browser zoom",
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "name": "Reduced motion disables decorative and selection animations",
+      "status": "PASS",
+      "errors": []
+    }
+  ]
+}

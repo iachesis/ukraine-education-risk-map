@@ -1,0 +1,42 @@
+{
+  "label": "B0",
+  "codeCommit": "a2e4a1da0bf27afc839be50eb5a9d506e64aded9",
+  "tree": "da1b56afaf3a89b0a9021ff68fcbda6c5d66f916",
+  "frozenAt": "2026-09-08T16:23:17+03:00",
+  "branch": "issue-17-astra-max-ui-001",
+  "baseline": "8e24e53dffcc77caf6b2e23a7b96b370b5948529",
+  "liveMainAtFreeze": "8e24e53dffcc77caf6b2e23a7b96b370b5948529",
+  "build": "Committed static files; no app build/install step",
+  "workspaceAtFreeze": "Tracked source clean; review evidence untracked and to be added in an evidence-only commit. Original main checkout clean and unchanged.",
+  "externalCritiqueBeforeFreeze": false,
+  "verificationSourceDigest": "8dd2b2f2276f38b1de200a264254f49afb835ca9b020e964fd8b9a2da5f74816",
+  "runtimeSha256": {
+    "index.html": "9f67832f22f6ccff771aafae9021d31d35f549f223f9f094c381378778a07ebf",
+    "assets/js/atlas-domain.js": "85cb9c55fd0a12e8bd9ee5b03f5b8fa0a3e48818d6b1055d862373d159a5cfb3",
+    "assets/js/atlas-map.js": "2ccb0c203f82eb771788228b2e58bd681d5b8af2a279535fdb34a6a0c49edcd1",
+    "assets/js/atlas.js": "cad9bb599d0b5c4bc578d99347fa76fee46895be2af09585372fb76c08be848e",
+    "assets/styles/atlas.css": "9a3aaaecadd90095f5a35a6aaa655f46f61675aedfdef4c1b48e8f6adc81f6e9",
+    "assets/scripts/leaflet.js": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a",
+    "assets/scripts/fuse.js": "d42fa2fe333d0ce3d9369962cba1da9b205e4fb3406d80fc89199c6766e8a666",
+    "assets/scripts/topojson-client.js": "25cd02ae486cc5063e0215a4e4cfb15de83700c87ac48bac4d57dc6aaf3ebb89",
+    "assets/styles/leaflet.css": "337bfca5cabd03b39815b2700febe2b3b7edf55921c59cd49f88ecb328212303",
+    "assets/atlas-mark.svg": "afc57d1bd8125de9a1da1955d3bb4ab25f2fb96855ca21b79bf58eb399b8dbfd",
+    "assets/data/adm1.json": "a4d355ec7536a1248589e3dfbaccd7e76005c8909f1bd2d8194aa60988eb9362",
+    "assets/data/adm3.json": "ac22b7ff802419e7182b21934d484b1defb8356666ed6b889040f69119ee3c14",
+    "assets/data/data.json": "a36b00ec6dc43fe0a222ad0b9d54454220e7a8461018ec877ae032bee302403b",
+    "assets/derived/boundaries.topo.json.gz": "114faf6dceedcbe234aab78353221908a2fd4907faba211e90eaa1f2edbb7f0d",
+    "assets/derived/geography.json": "76bba869b86476072359eb5ed9dd96caf5dc0d6e94529312fa92d08ac4884d0d",
+    "assets/fonts/Manrope-LICENSE.txt": "d826ab6583b12c26807d8716a545bdbbb672df04f48608a364ba9efdbe501c30",
+    "assets/fonts/manrope-cyrillic-ext-wght-normal.woff2": "de37de877dc17e4577341fa68bb5cb526b53d54cb29721e674208546a3c7849d",
+    "assets/fonts/manrope-cyrillic-wght-normal.woff2": "c268b459a9329e59fecf39a17618efd44c71735532048d60b12aab76a8c14914",
+    "assets/fonts/manrope-latin-wght-normal.woff2": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+  },
+  "laterCommitPolicy": "Any later review-packet commit must leave every runtimeSha256 file unchanged and explicitly identify this code commit.",
+  "preservedBaselineFiles": {
+    "CNAME": "154bde09e615ec4f525dc3eb17807e6365b8d517a6dd8a0f8929b7ecaf44f662",
+    "target/index.html": "a62acf49b85f6be3e34e42b0f60459164fcba093861ab1db424cd697a4d77bbb",
+    "assets/data/data.json": "a36b00ec6dc43fe0a222ad0b9d54454220e7a8461018ec877ae032bee302403b",
+    "assets/data/adm1.json": "a4d355ec7536a1248589e3dfbaccd7e76005c8909f1bd2d8194aa60988eb9362",
+    "assets/data/adm3.json": "ac22b7ff802419e7182b21934d484b1defb8356666ed6b889040f69119ee3c14"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "browser": "Chromium",
+  "version": "153.0.8010.12",
+  "results": [
+    {
+      "name": "Search useful while geometry delayed 3000 ms",
+      "status": "PASS",
+      "errors": [],
+      "detail": {
+        "searchResultMs": 124.69999998807907
+      }
+    },
+    {
+      "name": "Data HTTP 503, clear failure, successful manual retry",
+      "status": "PASS",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+      ]
+    },
+    {
+      "name": "Invalid metadata response is visibly rejected",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Geometry failure preserves working search/list; retry succeeds",
+      "status": "PASS",
+      "errors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ]
+    },
+    {
+      "name": "Corrupt gzip is visibly rejected; metadata stays usable",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Unavailable localStorage/sessionStorage does not affect application",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Separate missing/invalid fixtures display neutral categories and pattern",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Keyboard focus visible, tab access and source dialog confinement",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Touch at 390px: select, map navigation, reset, no overflow",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "Touch at 320px: select, map navigation, reset, no overflow",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "name": "200% text enlargement: content reflow, controls and long name",
+      "status": "PASS",
+      "errors": [],
+      "detail": {
+        "method": "Text-bearing DOM nodes and form controls at 2x computed font size; not OS/browser zoom",
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "name": "Reduced motion disables decorative and selection animations",
+      "status": "PASS",
+      "errors": []
+    }
+  ]
+}

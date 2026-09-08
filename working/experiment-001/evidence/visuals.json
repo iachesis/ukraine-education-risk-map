@@ -1,0 +1,168 @@
+{
+  "browser": "153.0.8010.12",
+  "viewportScale": 1,
+  "source": "Unedited native Playwright screenshots; independent ephemeral contexts; no hidden/cropped UI or mocked source data.",
+  "states": [
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "overview",
+      "url": "http://127.0.0.1:8018/"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "search",
+      "url": "http://127.0.0.1:8018/#q=%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "detail",
+      "url": "http://127.0.0.1:8018/#hromada=UA63120270000028556"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "comparison",
+      "url": "http://127.0.0.1:8018/#hromada=UA46040010000033885"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "about",
+      "url": "http://127.0.0.1:8018/#hromada=UA46040010000033885"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "sources",
+      "url": "http://127.0.0.1:8018/#hromada=UA46040010000033885"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "long-name",
+      "url": "http://127.0.0.1:8018/#hromada=UA21100070000018509"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "without-geometry",
+      "url": "http://127.0.0.1:8018/#hromada=UA01020010000048857"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "special",
+      "url": "http://127.0.0.1:8018/#hromada=3200000"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "list",
+      "url": "http://127.0.0.1:8018/#region=%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C&view=list"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "state": "empty",
+      "url": "http://127.0.0.1:8018/#region=%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C&q=%D1%8F%D1%8F%D1%8F%D1%8F%D1%8F%D1%8F%D1%8F%D1%8F&view=list"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "overview",
+      "url": "http://127.0.0.1:8018/"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "search",
+      "url": "http://127.0.0.1:8018/#q=%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "detail",
+      "url": "http://127.0.0.1:8018/#hromada=UA63120270000028556"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "selected-map",
+      "url": "http://127.0.0.1:8018/#hromada=UA63120270000028556"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "comparison",
+      "url": "http://127.0.0.1:8018/#hromada=UA46040010000033885"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "about",
+      "url": "http://127.0.0.1:8018/#hromada=UA46040010000033885"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "sources",
+      "url": "http://127.0.0.1:8018/#hromada=UA46040010000033885"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "long-name",
+      "url": "http://127.0.0.1:8018/#hromada=UA21100070000018509"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "without-geometry",
+      "url": "http://127.0.0.1:8018/#hromada=UA01020010000048857"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "special",
+      "url": "http://127.0.0.1:8018/#hromada=3200000"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "list",
+      "url": "http://127.0.0.1:8018/#region=%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C&view=list"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "state": "empty",
+      "url": "http://127.0.0.1:8018/#region=%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C&q=%D1%8F%D1%8F%D1%8F%D1%8F%D1%8F%D1%8F%D1%8F%D1%8F&view=list"
+    }
+  ]
+}

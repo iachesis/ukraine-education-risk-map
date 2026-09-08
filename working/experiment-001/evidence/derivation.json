@@ -1,0 +1,23 @@
+{
+  "method": "topojson-server 3.0.1; quantization 1e6; no simplification; gzip level 9",
+  "sourceSha256": {
+    "data": "a36b00ec6dc43fe0a222ad0b9d54454220e7a8461018ec877ae032bee302403b",
+    "adm1": "a4d355ec7536a1248589e3dfbaccd7e76005c8909f1bd2d8194aa60988eb9362",
+    "adm3": "ac22b7ff802419e7182b21934d484b1defb8356666ed6b889040f69119ee3c14"
+  },
+  "features": {
+    "adm1": 27,
+    "adm3": 1769
+  },
+  "checkedRings": 2264,
+  "checkedVertices": 400977,
+  "quantizationScaleDegrees": [
+    0.000018090953090953088,
+    0.000008194701194701196
+  ],
+  "maxHalfCellMetresUpperBound": 1.1054301768352284,
+  "topologyBytes": 2512714,
+  "gzipBytes": 894402,
+  "gzipSha256": "114faf6dceedcbe234aab78353221908a2fd4907faba211e90eaa1f2edbb7f0d",
+  "parity": "Every feature id/properties, geometry type, ring count and quantized vertex set verified. Classifications read from unchanged data.json; not transformed."
+}

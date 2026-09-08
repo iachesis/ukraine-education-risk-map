@@ -1,0 +1,21 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "targets": [
+        [
+          ".map-legend"
+        ]
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "targets": [
+        [
+          "#download > span"
+        ]
+      ]
+    }
+  ]
+}

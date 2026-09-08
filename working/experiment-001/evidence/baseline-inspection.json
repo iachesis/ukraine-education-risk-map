@@ -1,0 +1,42 @@
+{
+  "browser": "153.0.8010.12",
+  "conditions": "Python static server; loopback; unthrottled; deviceScaleFactor 1; new contexts; no cache priming",
+  "views": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "mapMs": 750.3999999761581,
+      "searchMs": 1146.3999999761581,
+      "pointerSelection": "PASS",
+      "layout": {
+        "viewport": 1440,
+        "scrollWidth": 1440,
+        "visibleInfo": "Рівень ризику громади\nНаведіть на громаду"
+      },
+      "errors": [
+        "warning: Failed to persist cached response for assets/data/adm3.json QuotaExceededError: Failed to execute 'setItem' on 'Storage': Setting the value of 'fetchCache:1757030400000:assets/data/adm3.json' exceeded the quota.",
+        "warning: Дані для громади з id 3200000 відсутні.",
+        "warning: Запис для пошуку з id 3200000 відсутній або некоректний."
+      ]
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "mapMs": 590.7999999523163,
+      "searchMs": 956.5,
+      "pointerSelection": "FAIL: result intercepted by overlapping baseline panels",
+      "layout": {
+        "viewport": 1172,
+        "scrollWidth": 1172,
+        "visibleInfo": "Рівень ризику громади\nНаведіть на громаду"
+      },
+      "errors": [
+        "warning: Failed to persist cached response for assets/data/adm3.json QuotaExceededError: Failed to execute 'setItem' on 'Storage': Setting the value of 'fetchCache:1757030400000:assets/data/adm3.json' exceeded the quota.",
+        "warning: Дані для громади з id 3200000 відсутні.",
+        "warning: Запис для пошуку з id 3200000 відсутній або некоректний."
+      ]
+    }
+  ]
+}

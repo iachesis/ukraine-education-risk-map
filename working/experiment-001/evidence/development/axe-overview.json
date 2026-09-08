@@ -1,0 +1,117 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "targets": [
+        [
+          ".map-legend"
+        ]
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "targets": [
+        [
+          "button[aria-label=\"Як читати рівні ризику\"]"
+        ],
+        [
+          "button[aria-label=\"Непереборний: 508 записів\"] > .risk-count"
+        ],
+        [
+          "button[aria-label=\"Дуже високий: 231 записів\"] > .risk-count"
+        ],
+        [
+          "button[aria-label=\"Високий: 241 записів\"] > .risk-count"
+        ],
+        [
+          "button[aria-label=\"Помірний: 293 записів\"] > .risk-count"
+        ],
+        [
+          "#view-count"
+        ],
+        [
+          ".snapshot-caption"
+        ],
+        [
+          "#map-view"
+        ],
+        [
+          "#list-view"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(1) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(2) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(3) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(4) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(5) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(6) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(7) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(8) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(9) > span"
+        ],
+        [
+          ".leaflet-marker-icon.region-label.leaflet-zoom-hide:nth-child(10) > span"
+        ],
+        [
+          ".leaflet-control-scale-line"
+        ],
+        [
+          ".map-index"
+        ],
+        [
+          ".map-heading > span:nth-child(2)"
+        ],
+        [
+          ".north > span"
+        ],
+        [
+          "#zoom-out"
+        ],
+        [
+          "#map-instructions"
+        ],
+        [
+          ".map-signature"
+        ],
+        [
+          ".legend-label"
+        ],
+        [
+          ".legend-item:nth-child(1) > span"
+        ],
+        [
+          ".legend-item:nth-child(2) > span"
+        ],
+        [
+          ".legend-item:nth-child(3) > span"
+        ],
+        [
+          ".legend-item:nth-child(4) > span"
+        ],
+        [
+          ".legend-item:nth-child(5) > span"
+        ],
+        [
+          "button[aria-label=\"Пояснення легенди\"]"
+        ]
+      ]
+    }
+  ]
+}
