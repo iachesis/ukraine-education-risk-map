@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Experiment 001 · Visual review</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;padding:36px;background:#f5f5f1;color:#202e33;font:15px/1.6 system-ui,sans-serif}header,main{max-width:1600px;margin:auto}h1{font-size:28px;margin:0 0 8px}h2{font-size:19px;margin:40px 0 16px}p{max-width:75ch}a{color:#183f58;text-underline-offset:4px}nav{display:flex;gap:22px;flex-wrap:wrap;margin:20px 0 30px}nav a{padding:7px 0}section{margin-bottom:40px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0}figcaption{font-size:13px;margin-bottom:8px}img{display:block;width:100%;height:auto;border:1px solid #d5dbd5}a:focus-visible{outline:3px solid #9b510c;outline-offset:5px}.phone{max-width:800px}.states{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.trace{padding:18px 0;border-block:1px solid #d5dbd5}@media(max-width:700px){body{padding:20px}.pair,.states{grid-template-columns:1fr}}
+</style>
+<header>
+  <h1>Experiment 001</h1>
+  <p>Compare the opening views before reading the creator's explanation. Images are unedited viewport captures; open any image at its original size.</p>
+  <nav><a href="../../">Use the candidate</a><a href="RETURN.md">Review packet</a><a href="NOTES.md">Creator's account</a></nav>
+</header>
+<main>
+  <section><h2>Desktop · 1440 × 900</h2><div class="pair">
+    <figure><figcaption>A · pinned baseline</figcaption><a href="evidence/baseline-desktop.png"><img src="evidence/baseline-desktop.png" alt="Baseline desktop opening"></a></figure>
+    <figure><figcaption>B0 · candidate</figcaption><a href="evidence/candidate-desktop.png"><img src="evidence/candidate-desktop.png" alt="Candidate desktop opening"></a></figure>
+  </div></section>
+  <section><h2>Phone viewport · 390 × 844</h2><div class="pair phone">
+    <figure><figcaption>A · pinned baseline</figcaption><a href="evidence/baseline-mobile.png"><img src="evidence/baseline-mobile.png" alt="Baseline phone opening" loading="lazy"></a></figure>
+    <figure><figcaption>B0 · candidate</figcaption><a href="evidence/candidate-mobile.png"><img src="evidence/candidate-mobile.png" alt="Candidate phone opening" loading="lazy"></a></figure>
+  </div></section>
+  <section class="trace"><h2>Continuous use</h2><p>Replayable Playwright traces include interactions, timestamps, DOM snapshots and screenshots from continuous desktop and mobile journeys. The local replay command is in RETURN.</p><nav><a href="evidence/candidate-desktop-trace.zip">Candidate desktop trace</a><a href="evidence/candidate-mobile-trace.zip">Candidate mobile trace</a><a href="evidence/baseline-desktop-trace.zip">Baseline desktop trace</a><a href="evidence/baseline-mobile-trace.zip">Baseline mobile trace</a></nav></section>
+  <section><h2>Search · the same Ukrainian query</h2><div class="pair">
+    <figure><figcaption>A · Харківська</figcaption><a href="evidence/baseline-desktop-search.png"><img src="evidence/baseline-desktop-search.png" alt="Baseline Kharkiv search" loading="lazy"></a></figure>
+    <figure><figcaption>B0 · Харківська</figcaption><a href="evidence/candidate-desktop-search.png"><img src="evidence/candidate-desktop-search.png" alt="Candidate Kharkiv search" loading="lazy"></a></figure>
+  </div></section>
+  <section><h2>Candidate secondary states</h2><div class="states">
+    <figure><figcaption>Persistent community selection</figcaption><a href="evidence/candidate-desktop-detail.png"><img src="evidence/candidate-desktop-detail.png" alt="Community detail" loading="lazy"></a></figure>
+    <figure><figcaption>Two communities in context</figcaption><a href="evidence/candidate-desktop-comparison.png"><img src="evidence/candidate-desktop-comparison.png" alt="Community comparison" loading="lazy"></a></figure>
+    <figure><figcaption>Region list and scoped export</figcaption><a href="evidence/candidate-desktop-list.png"><img src="evidence/candidate-desktop-list.png" alt="Lviv region list" loading="lazy"></a></figure>
+    <figure><figcaption>Distinct special geography</figcaption><a href="evidence/candidate-desktop-special.png"><img src="evidence/candidate-desktop-special.png" alt="Hatched Chornobyl zone" loading="lazy"></a></figure>
+  </div></section>
+  <section><h2>Phone details and explanation</h2><div class="pair phone">
+    <figure><figcaption>Long Ukrainian name</figcaption><a href="evidence/candidate-mobile-long-name.png"><img src="evidence/candidate-mobile-long-name.png" alt="Long Ukrainian community name" loading="lazy"></a></figure>
+    <figure><figcaption>Classification and source context</figcaption><a href="evidence/candidate-mobile-about.png"><img src="evidence/candidate-mobile-about.png" alt="Mobile data explanation" loading="lazy"></a></figure>
+  </div></section>
+</main>
+</html>
